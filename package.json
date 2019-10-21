@@ -1,6 +1,6 @@
 {
   "name": "@equapro/omnis-ini",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/equapro/omnis-ini",
   "dependencies": {
     "js-ini": "github:equapro/js-ini#workaround"
