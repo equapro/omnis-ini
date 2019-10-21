@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "homepage": "https://github.com/equapro/omnis-ini",
   "dependencies": {
-    "xlsx": "github:equapro/js-ini#workaround"
+    "js-ini": "github:equapro/js-ini#workaround"
   },
   "main": "eqp-ini.js",
   "description": "Omnis Studio JavaScript worker module for parsing/writing ini files.",
