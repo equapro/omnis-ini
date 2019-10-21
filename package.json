@@ -1,0 +1,25 @@
+{
+  "name": "@equapro/omnis-ini",
+  "version": "0.0.1",
+  "homepage": "https://github.com/equapro/omnis-ini",
+  "dependencies": {
+    "xlsx": "github:equapro/js-ini#workaround"
+  },
+  "main": "eqp-ini.js",
+  "description": "Omnis Studio JavaScript worker module for parsing/writing ini files.",
+  "scripts": {
+    "test": "echo \"Coming soon\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:equapro/omnis-ini.git"
+  },
+  "keywords": [
+    "Omnis Studio",
+    "JavaScript",
+    "Ini",
+    "js-ini"
+  ],
+  "author": "acucchieri",
+  "license": "MIT"
+}
