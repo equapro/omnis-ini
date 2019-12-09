@@ -1,4 +1,3 @@
-
 const omnis_calls = require('omnis_calls');
 const fs = require('fs');
 const ini = require('js-ini');
@@ -9,7 +8,7 @@ const methodMap = {
     /* =================================
      *  Reading ini file
      * ================================= */
-	read: function(param) {
+    read: function (param) {
         var filename = param.filename;
         var status = true;
         var content;
@@ -17,7 +16,7 @@ const methodMap = {
 
         try {
             content = ini.parse(fs.readFileSync(filename, 'utf-8'));
-        } catch(e) {
+        } catch (e) {
             error = e;
             status = false;
         }
@@ -27,7 +26,7 @@ const methodMap = {
             'status': status,
             'error': error
         };
-	},
+    },
     /* =================================
      *  Writing ini file
      * ================================= */
@@ -39,7 +38,7 @@ const methodMap = {
 
         try {
             fs.writeFileSync(filename, ini.stringify(config));
-        } catch(e) {
+        } catch (e) {
             error = e;
             status = false;
         }
@@ -53,18 +52,18 @@ const methodMap = {
 
 
 module.exports = {
-	call: function (method, param, response) { // The only requirement of an Omnis module is that it implement this function.
-		autoSendResponse = true;
+    call: function (method, param, response) { // The only requirement of an Omnis module is that it implement this function.
+        autoSendResponse = true;
 
-		if (methodMap[method]) {
-			const result = methodMap[method](param, response);
-			if (autoSendResponse) {
+        if (methodMap[method]) {
+            const result = methodMap[method](param, response);
+            if (autoSendResponse) {
                 omnis_calls.sendResponse(result, response);
             }
 
-			return true;
-		} else {
-			throw Error("Method '" + method + "' does not exist");
-		}
-	}
+            return true;
+        } else {
+            throw Error("Method '" + method + "' does not exist");
+        }
+    }
 };
